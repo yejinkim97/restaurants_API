@@ -5,7 +5,7 @@
  * (including web sites) or distributed to other students.
  *
  * Name: Ye Jin Kim      Student ID: 163291180         Date: Jan 19th, 2021
- * Heroku Link: _______________________________________________________________
+ * Heroku Link: https://web422as1yejinkim.herokuapp.com/
  *
  ********************************************************************************/
 const express = require("express");
@@ -50,7 +50,7 @@ app.get("/api/restaurants", (req, res) => {
     })
     .catch((err) => {
       console.log(err);
-      res.json({ message: `${err}` });
+      res.status(404).json({ message: `${err}` });
     });
 });
 
@@ -63,7 +63,7 @@ app.get("/api/restaurants/:id", (req, res) => {
     })
     .catch((err) => {
       console.log(err);
-      res.json({ message: `${err}` });
+      res.status(404).json({ message: `${err}` });
     });
 });
 
@@ -80,7 +80,7 @@ app.put("/api/restaurants/:id", (req, res) => {
     })
     .catch((err) => {
       console.log(err);
-      res.json({ message: `${err}` });
+      res.status(404).json({ message: `${err}` });
     });
 });
 
@@ -93,7 +93,7 @@ app.delete("/api/restaurants/:id", (req, res) => {
     })
     .catch((err) => {
       console.log(err);
-      res.json({ message: `${err}` });
+      res.status(404).json({ message: `${err}` });
     });
 });
 
