@@ -4,3 +4,6 @@
 #leaflet {
   height: 400px;
 }
+#css tr:hover {
+    background-color:#eff6f7;
+}
